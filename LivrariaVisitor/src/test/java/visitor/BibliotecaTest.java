@@ -62,7 +62,7 @@ class BibliotecaTest {
         JSONVisitor jsonVisitor = new JSONVisitor();
 
         String resultado = livro.accept(jsonVisitor);
-        assertEquals("JSON Livro: {\"titulo\": \"1984\", \"autor\": \"George Orwell\", \"status\": \"Disponível\"}", resultado);
+        assertEquals("JSON Livro: {titulo: \"1984\", autor: \"George Orwell\", status: \"Disponível\"}", resultado);
     }
 
     @Test
@@ -72,7 +72,7 @@ class BibliotecaTest {
         JSONVisitor jsonVisitor = new JSONVisitor();
 
         String resultado = livro.accept(jsonVisitor);
-        assertEquals("JSON Livro: {\"titulo\": \"Harry Potter e a Pedra Filosofal\", \"autor\": \"J.K. Rowling\", \"status\": \"Indisponível\"}", resultado);
+        assertEquals("JSON Livro: {titulo: \"Harry Potter e a Pedra Filosofal\", autor: \"J.K. Rowling\", status: \"Indisponível\"}", resultado);
     }
 
     @Test
@@ -81,7 +81,7 @@ class BibliotecaTest {
         JSONVisitor jsonVisitor = new JSONVisitor();
 
         String resultado = autor.accept(jsonVisitor);
-        assertEquals("JSON Autor: {\"nome\": \"George Orwell\", \"biografia\": \"Autor de 1984 e A Revolução dos Bichos.\"}", resultado);
+        assertEquals("JSON Autor: {nome: \"George Orwell\", biografia: \"Autor de 1984 e A Revolução dos Bichos.\"}", resultado);
     }
 
     @Test
@@ -90,7 +90,7 @@ class BibliotecaTest {
         JSONVisitor jsonVisitor = new JSONVisitor();
 
         String resultado = membro.accept(jsonVisitor);
-        assertEquals("JSON Membro: {\"nome\": \"João Silva\", \"id\": \"M001\", \"status\": \"Elegível\"}", resultado);
+        assertEquals("JSON Membro: {nome: \"João Silva\", id: \"M001\", status: \"Elegível\"}", resultado);
     }
 
     @Test
@@ -99,7 +99,7 @@ class BibliotecaTest {
         JSONVisitor jsonVisitor = new JSONVisitor();
 
         String resultado = membro.accept(jsonVisitor);
-        assertEquals("JSON Membro: {\"nome\": \"Maria Oliveira\", \"id\": \"M002\", \"status\": \"Não Elegível\"}", resultado);
+        assertEquals("JSON Membro: {nome: \"Maria Oliveira\", id: \"M002\", status: \"Não Elegível\"}", resultado);
     }
 }
 
